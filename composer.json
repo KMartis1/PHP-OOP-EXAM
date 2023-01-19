@@ -1,0 +1,15 @@
+{
+    "name": "marty/oop-exam",
+    "autoload": {
+        "psr-4": {
+            "Marty\\OopExam\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KMartis1",
+            "email": "martynas.keturakis@gmail.com"
+        }
+    ],
+    "require": {}
+}
