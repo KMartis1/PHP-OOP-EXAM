@@ -5,6 +5,7 @@ namespace Marty\OopExam\module;
 class Employee
 {
     public const EMPLOYEE_TYPE = 1;
+
     public string $name;
     protected int $salary;
     protected int $experience;
