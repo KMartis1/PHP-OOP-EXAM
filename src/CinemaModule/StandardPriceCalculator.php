@@ -2,11 +2,10 @@
 
 namespace Marty\OopExam\CinemaModule;
 
-class StandardPriceCalculator
+abstract class StandardPriceCalculator implements TotalCalculatorInterface
 {
-
-    public function StandardPriceCalculator(): void
+    public function StandardPriceCalculator(): float
     {
-
+        return (/*čia turėtų būti surenkami price iš sukurto ticket'u array ir visi jie sudedami*/);
     }
 }

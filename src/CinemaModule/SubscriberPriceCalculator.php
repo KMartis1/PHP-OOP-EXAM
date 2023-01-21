@@ -2,10 +2,10 @@
 
 namespace Marty\OopExam\CinemaModule;
 
-class SubscriberPriceCalculator
+abstract class SubscriberPriceCalculator implements TotalCalculatorInterface
 {
-    public function SubscriberPriceCalculator(): void
+    public function SubscriberPriceCalculator(): float
     {
-
+        return (/*čia turėtų būti surenkami price iš sukurto ticket'u array ir visi jie sudedami ir padauginami is 0,9*/);
     }
 }

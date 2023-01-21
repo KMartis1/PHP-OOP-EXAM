@@ -2,14 +2,14 @@
 
 namespace Marty\OopExam\CinemaModule;
 
-abstract class CinemaTicket
+Class CinemaTicket
 {
     public string $movieName;
     public string $place;
-    public ?Datetime $movieTime;
+    public string $movieTime;
     public float $price;
 
-    public function __construct(string $movieName, string $place, Datetime $movieTime,float $price)
+    public function __construct(string $movieName, string $place, string $movieTime,float $price)
     {
         $this->movieName = $movieName;
         $this->place = $place;
@@ -21,5 +21,4 @@ abstract class CinemaTicket
     {
         return $this->price;
     }
-
 }

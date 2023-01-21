@@ -10,10 +10,8 @@ class Manager extends Employee
 
     public function __construct(string $name, int $salary, int $owerTimeHours)
     {
-        $this->name = $name;
-        $this->salary= $salary;
         $this->owerTimeHours = $owerTimeHours;
-        parent::__construct($name, $salary, $owerTimeHours);
+        parent::__construct($name, $salary);
     }
 
     public function calculateSalary()
