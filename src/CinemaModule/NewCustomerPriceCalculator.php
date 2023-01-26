@@ -2,11 +2,15 @@
 
 namespace Marty\OopExam\CinemaModule;
 
-abstract class NewCustomerPriceCalculator implements TotalCalculatorInterface
+class NewCustomerPriceCalculator implements TotalCalculatorInterface
 {
-    public function NewCustomerPriceCalculator(): float
+    public function calculatePrice(array $items): float
     {
-        return (/*čia turėtų būti surenkami price iš sukurto ticket'u array ir visi jie sudedami ir atimama pirmo price nuolaida (iskviečiamas pirmo array elemento price * 0,2)*/);
+        $sum = 0;
+        foreach ($items as $CinemaTicket) {
+            $sum += $CinemaTicket->getPrice();
+        }
+        $sum -= ($items[0] * 0.2); //is bendros sumos atimima pirmo bilieto is array nuolaidos suma.
+        return $sum;
     }
-
 }

@@ -4,26 +4,26 @@ namespace Marty\OopExam\CinemaModule;
 
 class OrderProcessor implements TotalCalculatorInterface
 {
-    public array $Items = [];
+    public array $items = [];
     private $calculator;
     public float $finalPrice;
 
     public function addItem()
     {
-        $list = [];
-        array_push($list, $this);
+        $items = [];
+        array_push($items, $this);
     }
 
     public function getList()
     {
         return $this->list;
     }
-    public function calculatePrice(): float
+    public function calculatePrice(): void
     {
 
     }
     public function __construct(TotalCalculatorInterface $calculator)
     {
-        return $finalPrice + $this->calculator;
+        return $this->calculator;
     }
 }

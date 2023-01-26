@@ -2,10 +2,14 @@
 
 namespace Marty\OopExam\CinemaModule;
 
-abstract class StandardPriceCalculator implements TotalCalculatorInterface
+class StandardPriceCalculator implements TotalCalculatorInterface
 {
-    public function StandardPriceCalculator(): float
+    public function calculatePrice(array $items): float
     {
-        return (/*čia turėtų būti surenkami price iš sukurto ticket'u array ir visi jie sudedami*/);
+        $sum = 0;
+        foreach ($items as $CinemaTicket) {
+            $sum += $CinemaTicket->getPrice();
+        }
+        return $sum;
     }
 }
