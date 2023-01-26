@@ -5,6 +5,7 @@ use \Marty\OopExam\module\Employee;
 use \Marty\OopExam\module\Intern;
 use \Marty\OopExam\module\Manager;
 use \Marty\OopExam\CinemaModule\CinemaTicket;
+use \Marty\OopExam\CinemaModule\StandardPriceCalculator;
 
 $Intern1 = new Intern("Jonas", 500);
 $Manager1 = new Manager("Kazys", 1500,5);
@@ -19,8 +20,11 @@ echo $Manager1->getTypeDescription() . PHP_EOL;
 $Intern2 = clone $Intern1;
 echo $Intern2->getId();
 
-//$ticket1 = new CinemaTicket("Obuoliaut", "Kaunas", '2023-01-25', 10);
-//$ticket2 = new CinemaTicket("Obuoliaut", "Kaunas", "2023-01-25", 14);
+$ticket1 = new CinemaTicket("Obuoliaut", "Kaunas", '2023-01-25', 10);
+$ticket2 = new CinemaTicket("Obuoliaut", "Kaunas", "2023-01-25", 14);
 //$ticket3 = new CinemaTicket("Obuoliaut", "Kaunas", "2023-01-25", 8);
 //
-//var_dump($ticket1);
+//$ticket1->addItem($ticket1);
+//$ticket2->addItem($ticket2);
+//var_dump(getList());
+$object = new StandardPriceCalculator();
