@@ -4,5 +4,5 @@ namespace Marty\OopExam\CinemaModule;
 
 interface TotalCalculatorInterface
 {
-    public function calculatePrice(): void;
+    public function calculatePrice(): float;
 }
